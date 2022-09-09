@@ -1,6 +1,6 @@
-SHELL := /bin/bash
+SHELL := /usr/bin/env bash
 
-ligo_compiler=docker run --rm -v "$(PWD)":"$(PWD)" -w "$(PWD)" ligolang/ligo:stable
+ligo_compiler=ligo
 PROTOCOL_OPT=
 # ^ use LIGO en var bin if configured, otherwise use docker
 

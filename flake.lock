@@ -1,0 +1,82 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "ligo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1662667071,
+        "narHash": "sha256-aafhnBdsbVkaIqyT1FoCy+zsIjWzRUiUyH2nMpuY5js=",
+        "owner": "ligolang",
+        "repo": "ligo",
+        "rev": "70575ac1c92f0a29096f6f2a1f01c59cefdc4b3e",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "ligolang",
+        "repo": "ligo",
+        "type": "gitlab"
+      }
+    },
+    "nixpkgs": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1662479947,
+        "narHash": "sha256-sie2EX41mqrbYB+M75xZoUHpTHZXHIs/3k4jSNM90YI=",
+        "owner": "nix-ocaml",
+        "repo": "nix-overlays",
+        "rev": "f3dcb041b957f2a573f414407ee79d4475e3245e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-ocaml",
+        "repo": "nix-overlays",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1662070595,
+        "narHash": "sha256-fYrdaUXhV4oPhkehHRwj78d1VjATnK4SF0fElEQUyLw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9f867325b5da6c4c9211707abdb481e1d0b3e589",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9f867325b5da6c4c9211707abdb481e1d0b3e589",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "ligo": "ligo",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
