@@ -1,13 +1,10 @@
 {
   inputs = {
-    nixpkgs.url = "github:nix-ocaml/nix-overlays";
-    ligo = {
-      url = "gitlab:ligolang/ligo";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    esy.url = "github:esy/esy";
+    ligo.url = "gitlab:ligolang/ligo";
   };
 
-  outputs = { self, ligo, nixpkgs, ... }: 
+  outputs = { self, ligo, esy, nixpkgs, ... }: 
   let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in
@@ -15,7 +12,7 @@
     devShells.x86_64-linux.default = pkgs.mkShell {
       buildInputs = [
         ligo.packages.x86_64-linux.default
-        pkgs.esy
+        esy.packages.x86_64-linux.default
         pkgs.nodejs
       ];
     };

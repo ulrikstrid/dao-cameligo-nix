@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "esy": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nix-filter": "nix-filter",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1663071811,
+        "narHash": "sha256-coODH8m4bIHRoNVqWs02dQ6MbcHk4vx07JVF1jfTR/0=",
+        "owner": "esy",
+        "repo": "esy",
+        "rev": "1b73d114c3481bd6f96e44f64241476957750a62",
+        "type": "github"
+      },
+      "original": {
+        "owner": "esy",
+        "repo": "esy",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1659877975,
@@ -17,16 +37,14 @@
     },
     "ligo": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1662667071,
-        "narHash": "sha256-aafhnBdsbVkaIqyT1FoCy+zsIjWzRUiUyH2nMpuY5js=",
+        "lastModified": 1663024296,
+        "narHash": "sha256-gm06IcihKIYKCnIcX06Z9w+GlzoXIthb8eaiOlj2/n8=",
         "owner": "ligolang",
         "repo": "ligo",
-        "rev": "70575ac1c92f0a29096f6f2a1f01c59cefdc4b3e",
+        "rev": "d6d015642795d2d76ed58166360e97d5f2effe6c",
         "type": "gitlab"
       },
       "original": {
@@ -35,17 +53,35 @@
         "type": "gitlab"
       }
     },
+    "nix-filter": {
+      "locked": {
+        "lastModified": 1661201956,
+        "narHash": "sha256-RizGJH/buaw9A2+fiBf9WnXYw4LZABB5kMAZIEE5/T8=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "3b821578685d661a10b563cba30b1861eec05748",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "inputs": {
-        "flake-utils": "flake-utils",
+        "flake-utils": [
+          "esy",
+          "flake-utils"
+        ],
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1662479947,
-        "narHash": "sha256-sie2EX41mqrbYB+M75xZoUHpTHZXHIs/3k4jSNM90YI=",
+        "lastModified": 1663021394,
+        "narHash": "sha256-VxSe7wcSbyXZEPhuJGKHKhXFtLqNAdTCVZvB20NqnOU=",
         "owner": "nix-ocaml",
         "repo": "nix-overlays",
-        "rev": "f3dcb041b957f2a573f414407ee79d4475e3245e",
+        "rev": "f2ce73bb011790a4f5b873b0eea430a7e7191539",
         "type": "github"
       },
       "original": {
@@ -56,24 +92,53 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1662070595,
-        "narHash": "sha256-fYrdaUXhV4oPhkehHRwj78d1VjATnK4SF0fElEQUyLw=",
+        "lastModified": 1662940775,
+        "narHash": "sha256-SIgHTMjM+PqXWaXDzXsy/XmrDuTu7zpPvizgS7C9n+M=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9f867325b5da6c4c9211707abdb481e1d0b3e589",
+        "rev": "faa93c4e19e79e7a6de31d6d3492b8f00760ca82",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9f867325b5da6c4c9211707abdb481e1d0b3e589",
+        "rev": "faa93c4e19e79e7a6de31d6d3492b8f00760ca82",
         "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1662096612,
+        "narHash": "sha256-R+Q8l5JuyJryRPdiIaYpO5O3A55rT+/pItBrKcy7LM4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "21de2b973f9fee595a7a1ac4693efff791245c34",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1662934689,
+        "narHash": "sha256-mXi8hmhiunOVTeHiuouWXb0vTqjzp9v9kshMmI561Us=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a0b7e70db7a55088d3de0cc370a59f9fbcc906c3",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
     "root": {
       "inputs": {
+        "esy": "esy",
         "ligo": "ligo",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_4"
       }
     }
   },
